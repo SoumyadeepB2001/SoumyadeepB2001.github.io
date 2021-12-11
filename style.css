@@ -1,25 +1,27 @@
-body, html {
+body,
+html {
 	height: 100%;
 	margin-top: 18px;
 	margin-bottom: 60px;
 }
 
-body{
+body {
 	text-align: center;
 	font-family: 'Acme';
 	font-size: 19px;
 	background-image: url("bg.png");
-	height: 100%;  
+	height: 100%;
 	background-position: center;
 	background-repeat: repeat;
 	background-size: cover;
 }
 
-h1,h3{
+h1,
+h3 {
 	color: aliceblue;
 }
 
-a {
+a.coding {
 	display: block;
 	max-width: 38%;
 	margin: auto;
@@ -32,19 +34,29 @@ a {
 	text-decoration: none;
 	-webkit-transition: all 150ms ease-in-out;
 	transition: all 150ms ease-in-out;
-  }
-  
-  a:hover {
+}
+
+a.coding:hover {
 	display: block;
 	margin: auto;
 	padding: 15px 20px;
 	border-radius: 26px;
-	background-color: rgb(27, 14, 141,0.3);
+	background-color: rgb(27, 14, 141, 0.3);
 	color: white;
 	max-width: 42%;
 	font-size: 28px;
 	box-shadow: 10px 10px 8px #888888;
 	font-weight: bold;
-  }
+}
 
- 
+a.social {
+	text-decoration: none;
+}
+
+img.social {
+	transition: transform .2s;
+}
+
+img.social:hover {
+	transform: scale(1.2);
+}
