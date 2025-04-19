@@ -1,49 +1,138 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Links</title>
-	<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumyadeep Banerjee</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div style="text-align: center;">
-		<img src="Pictures/img.jpg" height="110" width="110" style="border-radius:50%;">
+    <header>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <h1>Soumyadeep Banerjee</h1>
+                <p class="subtitle">Aspiring Backend Developer</p>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects-preview">Projects</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <img src="assets/profile_pic/profile.jpg" alt="Profile Photo" class="profile-pic">
+        </div>
+    </header>
 
-	</div>
-	<h1>Soumyadeep Banerjee</h1>
-	<h3>Hi, I am a BSc (Honours) in Computer Science graduate from West Bengal State University, currently studying MCA at the University of Kalyani.
-		Below are the
-		links
-		to some of my social media and coding profiles.</h3>
-	<h3><img src="Pictures/marker.png" height="20" width="20">Kolkata, India</h3>
-	<br>
-	<a class="coding" href="https://github.com/SoumyadeepB2001" target="_blank">GitHub</a>
-	<br>
-	<a class="coding" href="https://www.codechef.com/users/soumyadeepb" target="_blank">CodeChef</a>
-	<br>
-	<a class="coding" href="https://www.hackerrank.com/SoumyadeepB2001" target="_blank">HackerRank</a>
-	<br>
-	<a class="coding" href="https://leetcode.com/SoumyadeepB2001/" target="_blank">LeetCode</a>
-	<br>
-	<a class="coding" href="https://auth.geeksforgeeks.org/user/soumyadeepb2001/practice/"
-		target="_blank">GeeksForGeeks</a>
-	<br>
-	<a class="coding" href="https://www.hackerearth.com/@SoumyadeepB2001" target="_blank">HackerEarth</a>
-	<br>
-	<div style="text-align: center;">
-		<a class="social" href="https://www.facebook.com/SoumyadeepB2001" target="_blank"><img class="social"
-				src="Pictures/FB.png" height="48" width="48" style="padding-right: 25px;"></a>
-		<a class="social" href="https://www.instagram.com/soumyadeepbanerjee2001/" target="_blank"><img class="social"
-				src="Pictures/Insta.png" height="48" width="48" style="padding-right: 25px;"></a>
-		<a class="social" href="https://twitter.com/SoumyadeepB2001" target="_blank"><img class="social"
-				src="Pictures/TWT.png" height="48" width="48" style="padding-right: 25px;"></a>
-		<a class="social" href="mailto:soumyadeepbanerjee40@gmail.com" target="_blank"><img class="social"
-				src="Pictures/Mail.png" height="48" width="48" style="padding-right: 25px;"></a>
-		<a class="social" href="https://www.linkedin.com/in/soumyadeepb2001/" target="_blank"><img class="social"
-				src="Pictures/LinkedIn.png" height="48" width="48"></a>
-	</div>
-	<br>
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p style="text-align: justify; text-justify: inter-word;">
+            I am Soumyadeep, a dedicated computer science graduate with a strong academic foundation. I hold a Bachelor
+            of Science (Honours) degree in Computer Science from West Bengal State University, where I graduated with a
+            CGPA of 9.69. Currently, I am pursuing a Master of Computer Applications (MCA) at the University of Kalyani.
+        </p>
+        <p style="text-align: justify; text-justify: inter-word;">
+            With a keen interest in backend development and database management, I aspire to become a skilled backend
+            developer. I am passionate about building clean, efficient, and user-friendly applications, and I am
+            committed to continuous learning and staying updated with emerging technologies.
+        </p>
+    </section>
+
+    <section class="section" id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <p>Here are the primary technologies I work with:</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="assets/icons/java.png" alt="Java Icon" class="skill-icon">
+                    <div class="skill-name">Java</div>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/csharp.png" alt="C# Icon" class="skill-icon">
+                    <div class="skill-name">C#</div>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/mysql.png" alt="My SQL Icon" class="skill-icon">
+                    <div class="skill-name">MySQL</div>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/mssqlserver.png" alt="SQL Server Icon" class="skill-icon">
+                    <div class="skill-name">MS SQL Server</div>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/html.png" alt="HTML5 Icon" class="skill-icon">
+                    <div class="skill-name">HTML</div>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/dotnet.png" alt=".NET Icon" class="skill-icon">
+                    <div class="skill-name">.NET</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects-preview">
+        <div class="projects-preview">
+            <div class="preview-text">
+                <h2>Projects</h2>
+                <p style="text-align: justify; text-justify: inter-word;">
+                    Check out my collection of projects showcasing my skills in various technologies
+                    including web development, database design, and application architecture.
+                </p>
+            </div>
+            <a href="projects.html" class="btn">View All Projects</a>
+        </div>
+    </section>
+
+    <section class="section" id="resume">
+        <h2>Resume</h2>
+        <a href="assets/resume/Soumyadeep_Banerjee_resume.pdf" target="_blank" class="btn resume-btn">View Resume</a>
+        <a href="assets/resume/Soumyadeep_Banerjee_resume.pdf" download class="btn resume-btn">Download Resume</a>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+            <li>
+                <img src="assets/contact_logos/gmail.png" alt="Gmail" class="contact-icon">
+                <a href="mailto:soumyadeepbanerjee410@gmail.com">soumyadeepbanerjee410@gmail.com</a>
+            </li>
+            <li>
+                <img src="assets/contact_logos/phone.png" alt="Phone" class="contact-icon">
+                <a href="tel:+91-9330531628">+91-9330531628</a>
+            </li>
+            <li>
+                <img src="assets/contact_logos/insta.png" alt="Instagram" class="contact-icon">
+                <a href="https://www.instagram.com/soumyadeepb2001/" target="_blank">Instagram: soumyadeepb2001</a>
+            </li>
+            <li>
+                <img src="assets/contact_logos/linkedin.png" alt="LinkedIn" class="contact-icon">
+                <a href="https://www.linkedin.com/in/soumyadeepb2001/" target="_blank">LinkedIn: soumyadeepb2001</a>
+            </li>
+            <li>
+                <img src="assets/contact_logos/github.png" alt="GitHub" class="contact-icon">
+                <a href="https://github.com/SoumyadeepB2001" target="_blank">GitHub: SoumyadeepB2001</a>
+            </li>
+            <li>
+                <img src="assets/contact_logos/leetcode.png" alt="Leetcode" class="contact-icon">
+                <a href="https://leetcode.com/u/SoumyadeepB2001/" target="_blank">Leetcode: SoumyadeepB2001</a>
+            </li>
+            <li>
+                <img src="assets/contact_logos/hackerrank.png" alt="Leetcode" class="contact-icon">
+                <a href="https://www.hackerrank.com/profile/SoumyadeepB2001" target="_blank">HackerRank:
+                    SoumyadeepB2001</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <p>&copy; 2025 Soumyadeep Banerjee. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
