@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soumyadeep Banerjee - Projects</title>
+    <link rel="stylesheet" href="projectstyle.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <h1>List of my projects</h1>
+                <nav>
+                    <a href="index.html">&larr; Back to homepage</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Grid Container -->
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="project_cover_photos/microloom.png" alt="Microloom Project" class="project-image" />
+            <h2>Microloom: A Social Media Web Application</h2>
+            <h3 class="tech-stack">Tech Used: ASP.NET 4.8, C#, HTML, CSS, JavaScript, Bootstrap and MS SQL Server.</h3>
+            <ul class="project-points">
+                <li>Implemented authentication and authorization via cookies; used OTP verification for password resets.
+                </li>
+                <li>Enabled post creation, reactions (likes and dislikes), sharing, and commenting.</li>
+                <li>Integrated real-time messaging with SignalR and built a notification system for user interactions.
+                </li>
+                <li>Designed a profile system allowing users to edit their profiles, upload or remove profile pictures, and view
+                    interaction history.</li>
+            </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="project_cover_photos/steganography.png" alt="Steganography Tool" class="project-image" />
+            <h2>Image & Audio Steganography Tool</h2>
+            <h3 class="tech-stack">Tech Used: Java (Core), Swing Framework</h3>
+            <ul class="project-points">
+                <li>Built a Java GUI app for LSB steganography to hide encrypted text in PNG and WAV files.</li>
+                <li>Used Caesar cipher with a user-defined shift value; embedded cipher key within hidden data.</li>
+                <li>Applied OOP principles and handled RGB pixel manipulation and WAV sample encoding with Least
+                    Significant Bit of Least Significant Byte, supporting Little Endian format.</li>
+                <li>Implemented custom decoding logic for accurate extraction and decryption from image and audio files.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Soumyadeep Banerjee. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
