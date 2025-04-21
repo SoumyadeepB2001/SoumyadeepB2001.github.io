@@ -51,6 +51,29 @@ nav a:hover {
     gap: 1.5rem;
 }
 
+.more-links-heading {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0.2rem 0 0.8rem 0;
+}
+
+.more-links,
+.more-links:visited,
+.more-links:active,
+.more-links:focus {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.more-links:hover,
+.more-links:visited:hover,
+.more-links:active:hover,
+.more-links:focus:hover {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 .tech-stack {
     font-size: 0.9rem;
     font-weight: bold;
