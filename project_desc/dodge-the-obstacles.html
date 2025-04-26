@@ -27,6 +27,28 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             object-fit: contain;
         }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -116,6 +138,13 @@
             &nbsp;&nbsp;&nbsp;&nbsp;• A <b>“Game Over” dialog</b> is displayed showing the final score.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;• The application exits immediately using <b>System.exit(0)</b>.
         </p>
+        <br>
+        <div class="video-wrapper">
+            <iframe width="940" height="529" src="https://www.youtube.com/embed/wsP1OZrzemU"
+                title="Dodge The Obstacles Demo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </section>
 
     <section class="section">
@@ -133,7 +162,6 @@
             checks before repainting.
         </p>
     </section>
-
 
     <footer>
         <p>&copy; 2025 Soumyadeep Banerjee. All rights reserved.</p>

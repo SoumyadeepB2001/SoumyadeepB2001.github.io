@@ -27,6 +27,28 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             object-fit: contain;
         }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -45,7 +67,7 @@
     <section class="section">
         <h2>1. Introduction to Block Breaker</h2>
         <p style="text-align: justify; text-justify: inter-word;">
-            This is a <b>Java-based Brick Breaker game</b> built entirely using <b>Swing and AWT</b>. The objective is
+            This is a <b>Java-based Block (Brick) Breaker game</b> built entirely using <b>Swing and AWT</b>. The objective is
             simple yet engaging: the player controls a paddle to bounce a ball that destroys a wall of bricks. The game
             ends when the player either breaks all bricks (win) or the ball falls below the paddle (game over).
         </p>
@@ -86,13 +108,21 @@
             &nbsp;&nbsp;&nbsp;&nbsp;- The sine function determines the horizontal (X) movement direction, while the
             cosine function controls the vertical (Y) movement.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;- This ensures the bounce angle changes depending on where the ball hits the paddle
-            — hitting the edge results in a steeper angle, while hitting the center results in a near-vertical bounce.<br>
+            — hitting the edge results in a steeper angle, while hitting the center results in a near-vertical
+            bounce.<br>
             3. <b>Collision Detection:</b> Uses <b>Rectangle</b> intersection checks to detect collisions with the
             paddle, walls, and bricks.<br>
             4. <b>Brick Removal:</b> Bricks are stored in an <b>ArrayList</b>. On collision, the brick is removed and
             the ball's vertical direction is reversed.<br>
             5. <b>Paddle Movement:</b> Boolean flags <b>moveLeft</b> and <b>moveRight</b> are toggled via
             <b>KeyListener</b> and used in each frame to move the paddle.
+            <br>
+        <div class="video-wrapper">
+            <iframe width="940" height="529" src="https://www.youtube.com/embed/EQ5BtAFjebo" title="Block Breaker Demo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         </p>
     </section>
 
@@ -111,7 +141,6 @@
             application exits using <b>System.exit(0)</b>.
         </p>
     </section>
-
 
     <footer>
         <p>&copy; 2025 Soumyadeep Banerjee. All rights reserved.</p>
