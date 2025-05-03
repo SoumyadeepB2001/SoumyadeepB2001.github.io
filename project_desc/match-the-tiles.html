@@ -27,6 +27,28 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             object-fit: contain;
         }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -73,6 +95,12 @@
             6. <b>Win Condition:</b> Once all 10 pairs are matched (i.e., 20 matched tiles), a message box congratulates
             the player and disables further interaction.
         </p>
+        <div class="video-wrapper">
+            <iframe width="940" height="529" src="https://www.youtube.com/embed/H3TmY1Nf5Lo" title="Match The Tiles"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </section>
 
     <section class="section">
