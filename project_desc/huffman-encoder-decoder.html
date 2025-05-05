@@ -89,7 +89,23 @@
     </section>
 
     <section class="section">
-        <h2>4. How Huffman Extraction Works</h2>
+        <h2>4. How Huffman Compression Works</h2>
+        <p style="text-align: justify; text-justify: inter-word;">
+            - <b>Frequency Table Creation:</b> Each byte (0–255) is counted using
+            <b>buildFrequencyTable()</b> to determine its frequency in the file.<br>
+            - <b>Huffman Tree Generation:</b> A binary tree is built using a <b>priority queue</b> where nodes with
+            lower frequency have higher priority. Ties are broken lexicographically.<br>
+            - <b>Code Generation:</b> A recursive traversal generates a binary code for each byte, stored in a
+            <b>HashMap&lt;Byte, String&gt;</b>.<br>
+            - <b>Encoding:</b> The original file is re-encoded using these binary codes and written using
+            <b>BitOutputStream</b>, which handles individual bit-level writing.<br>
+            - <b>Header Writing:</b> Metadata such as file extension, frequency table, and padding are prepended using
+            <b>HuffmanEncoder.writeHuffFile()</b>.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>5. How Huffman Extraction Works</h2>
         <p style="text-align: justify; text-justify: inter-word;">
             - <b>Header Reading:</b> The decoder reads the file extension, padding value, and frequency table using
             <b>HuffmanDecoder.readHeader()</b>.<br>
@@ -118,7 +134,7 @@
     </section>
 
     <section class="section">
-        <h2>5. Technical Components and Design</h2>
+        <h2>6. Technical Components and Design</h2>
         <p style="text-align: justify; text-justify: inter-word;">
             - <b>Bit-Level I/O:</b> The <b>BitInputStream</b> and <b>BitOutputStream</b> classes enable precise reading
             and writing of individual bits, which is essential for Huffman coding.<br>
