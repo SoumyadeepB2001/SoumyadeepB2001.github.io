@@ -89,18 +89,24 @@
     </section>
 
     <section class="section">
-        <h2>4. How Huffman Compression Works</h2>
+        <h2>4. What is happening</h2>
         <p style="text-align: justify; text-justify: inter-word;">
-            - <b>Frequency Table Creation:</b> Each byte (0–255) is counted using
-            <b>buildFrequencyTable()</b> to determine its frequency in the file.<br>
-            - <b>Huffman Tree Generation:</b> A binary tree is built using a <b>priority queue</b> where nodes with
-            lower frequency have higher priority. Ties are broken lexicographically.<br>
-            - <b>Code Generation:</b> A recursive traversal generates a binary code for each byte, stored in a
-            <b>HashMap&lt;Byte, String&gt;</b>.<br>
-            - <b>Encoding:</b> The original file is re-encoded using these binary codes and written using
-            <b>BitOutputStream</b>, which handles individual bit-level writing.<br>
-            - <b>Header Writing:</b> Metadata such as file extension, frequency table, and padding are prepended using
-            <b>HuffmanEncoder.writeHuffFile()</b>.
+            Each <b>byte</b> (0–255) is treated like
+            a "symbol". We count how many times each byte appears in the file (its <b>frequency</b>). <br> Each byte
+            becomes
+            a <b>leaf node</b> in a binary tree. All leaf nodes go into a <b>priority queue</b> (a special kind of queue
+            that gives you the smallest thing first). <br> Nodes with <b>lower frequencies</b> are more important
+            here—they
+            get processed first. If two nodes have the same frequency, the one with the <b>lower byte value</b>
+            (lexicographical order) goes first. This is how <b>ties are broken</b>. <br> We build the tree from the
+            bottom
+            up: Pull out the two smallest nodes, combine them into a new node whose frequency is the <b>sum of both</b>,
+            put the new node back in the queue. Repeat until only <b>one node is left</b>—this is the <b>root of the
+                Huffman tree</b>.<br>
+            <b>We walk the tree:</b> Going <b>left</b> adds a '0' to the code, going
+            <b>right</b> adds a '1'. Once we reach a <b>leaf node</b> (i.e., a symbol), we <b>record the code string</b>
+            we built along the way in a map. The final result: a <code>HashMap&lt;Byte, String&gt;</code> where each
+            byte has its <b>unique binary code</b>.
         </p>
     </section>
 
