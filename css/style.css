@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: var(--font-family);
@@ -295,7 +299,7 @@ section:focus-within,
     margin-right: auto;
 }
 
-/* Responsive */
+/* 1. Small screen layout changes (including text-align) */
 @media (max-width: 600px) {
     body {
         padding: 1.5rem 1rem;
@@ -337,22 +341,41 @@ section:focus-within,
         text-align: left !important;
     }
 
+    .contact-list a,
+    .contact-list li {
+        font-size: 14px;
+    }
+}
+
+/* 2. Touch device behavior overrides */
+@media (hover: none) and (pointer: coarse) {
+
+    section:hover,
+    section:focus-within,
+    .skill-card:hover,
+    .skill-card:focus {
+        background-color: unset;
+        outline: none;
+    }
+
     section {
-        background-color: #e0f7f4;
+        background-color: var(--bg-color);
         box-shadow: 0 4px 12px rgba(26, 188, 156, 0.3);
         border-radius: 8px;
         margin-bottom: 2rem;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    section:focus {
+        outline: none;
     }
 
     section::before {
         height: 100%;
-    }
-
-    .contact-list a {
-        font-size: 14px;
-    }
-
-    .contact-list li {
-        font-size: 14px;
     }
 }
