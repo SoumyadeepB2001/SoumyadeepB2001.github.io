@@ -173,7 +173,6 @@ p {
 }
 
 .skill-card {
-    background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
@@ -299,6 +298,24 @@ section:focus-within,
     margin-right: auto;
 }
 
+.edu-exp-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.org-logo {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: white;
+    padding: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* 1. Small screen layout changes (including text-align) */
 @media (max-width: 600px) {
     body {
@@ -345,10 +362,27 @@ section:focus-within,
     .contact-list li {
         font-size: 14px;
     }
+
+    .edu-exp-box {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .org-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-name {
+        text-align: center !important;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* 2. Touch device behavior overrides */
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
 
     section:hover,
     section:focus-within,
